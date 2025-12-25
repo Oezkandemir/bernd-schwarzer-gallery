@@ -2,10 +2,21 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative flex w-full flex-col items-center justify-center overflow-hidden pt-20 min-h-[85vh]"
+      className="relative flex w-full flex-col items-center justify-start overflow-hidden pt-20 min-h-[85vh]"
     >
+      {/* Hero Image - Full width, partially visible in height, positioned directly under header */}
+      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+        <img
+          src="/berndtrot.png"
+          alt="Bernd Schwarzer"
+          className="w-full h-full object-cover object-center opacity-90"
+        />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background"></div>
+      </div>
+
       {/* Abstract Background Art */}
-      <div className="absolute inset-0 overflow-hidden opacity-30 dark:opacity-20">
+      <div className="absolute inset-0 overflow-hidden opacity-20 dark:opacity-10 pointer-events-none">
         {/* Geometric shapes inspired by contemporary art */}
         <div className="absolute top-10 left-10 w-64 h-64 bg-[#FFEB3B] rounded-full blur-3xl"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
@@ -21,8 +32,8 @@ const HeroSection = () => {
         </svg>
       </div>
 
-      {/* Hero Content - Centered */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16">
+      {/* Hero Content - Positioned below the image */}
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-8 md:py-12 lg:py-16">
         <div className="space-y-6 sm:space-y-8 md:space-y-10 text-center">
           {/* Name with artistic underline */}
           <h1 className="animate-fade-up font-display text-6xl font-medium opacity-0 md:text-8xl lg:text-9xl relative inline-block">
