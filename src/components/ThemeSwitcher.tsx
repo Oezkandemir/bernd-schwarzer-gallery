@@ -10,13 +10,13 @@ const ThemeSwitcher = () => {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="h-9 w-9 text-foreground hover:text-accent transition-colors"
+      className="h-9 w-9 text-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       {theme === "light" ? (
-        <Moon size={20} className="transition-transform hover:rotate-12" />
+        <Moon size={20} />
       ) : (
-        <Sun size={20} className="transition-transform hover:rotate-12" />
+        <Sun size={20} />
       )}
     </Button>
   );

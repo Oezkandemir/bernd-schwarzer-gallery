@@ -7,12 +7,10 @@ const HeroSection = () => {
       {/* Hero Image - Full width, partially visible in height, positioned directly under header */}
       <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
         <img
-          src="/berndtrot.png"
+          src="/berndtrot.jpeg"
           alt="Bernd Schwarzer"
-          className="w-full h-full object-cover object-center opacity-90"
+          className="w-full h-full object-cover object-center"
         />
-        {/* Gradient overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background"></div>
       </div>
 
       {/* Abstract Background Art */}
